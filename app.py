@@ -4,6 +4,7 @@
 # visit http://127.0.0.1:8050/ in your web browser.
 
 import dash
+import xlrd
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
