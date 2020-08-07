@@ -20,10 +20,6 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 # see https://plotly.com/python/px-arguments/ for more options
 df = pd.read_excel(r'C:\Users\imran\Downloads\Hospice data from Board Charts 1.1.2016_6.30.2020.xlsx')
 long_df = pd.melt(df, id_vars=['Months', 'Year'], value_vars=['#Pts Served', 'PCF(ADC)', 'ALOS', 'Admissions'])
-long_df_served = long_df.loc[long_df['variable'] == '#Pts Served']
-long_df_pcf = long_df.loc[long_df['variable'] == 'PCF(ADC)']
-long_df_alos = long_df.loc[long_df['variable'] == 'ALOS']
-long_df_admissions = long_df.loc[long_df['variable'] == 'Admissions']
 
 year_indicators = long_df['Year'].unique()
 variable_indicators = long_df['variable'].unique()
